@@ -96,7 +96,9 @@ public class PhonebookDAO {
         }
         this.saveAll(people);
     }
+    public void update(Person person){
 
+    }
     public void save(Person person) {
         for (Storage storage : this.storages) {
             storage.save(person);
