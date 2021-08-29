@@ -6,4 +6,9 @@ public class DatabaseStorage implements phonebook.storage.Storage {
     @Override
     public void save(Person save) {
     }
+
+    @Override
+    public void update(Person person) {
+
+    }
 }

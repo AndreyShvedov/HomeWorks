@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class FileStorage implements phonebook.storage.Storage {
+    public void update(Person person){
+
+    }
+
+
     @Override
     public void save(Person person) {
         try (var fin = new FileOutputStream("./phonebook.txt", true)) {

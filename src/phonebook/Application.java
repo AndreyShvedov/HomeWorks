@@ -1,6 +1,7 @@
 package phonebook;
 
 import phonebook.dao.PhonebookDAO;
+import phonebook.entity.Person;
 import phonebook.mapper.InputMapper;
 import phonebook.storage.DatabaseStorage;
 import phonebook.storage.FileStorage;
@@ -19,6 +20,10 @@ public class Application {
                 for (int i = 0; i < 15; i++) {
                     dao.save(mapper.toEntity(args));
                 }
+            }
+            case "update" -> {
+                var mapper = new InputMapper();
+                dao.update(mapper.toEntity(args));
             }
             case "save" -> {
                 var mapper = new InputMapper();
