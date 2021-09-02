@@ -10,7 +10,7 @@ public class Computer {
     private Integer cycles;
     private Integer random;
 
-    public void Computer(String CPU, Integer RAM, Integer HDD, Integer cycles) {     //конструктор задания параметров компьютера
+    public Computer(String CPU, Integer RAM, Integer HDD, Integer cycles) {     //конструктор задания параметров компьютера
         this.CPU = CPU;
         this.RAM = RAM;
         this.HDD = HDD;
@@ -35,11 +35,11 @@ public class Computer {
         } else {
             System.out.println(random);
             System.out.println("Компьютер сгорел!");
+            System.out.println("Компьютеру конец!");
         }
-        System.out.println("Компьютеру конец!");
     }
 
-    public Integer turningOff() {                //метод выключения
+    public void turningOff() {                //метод выключения
         System.out.println("Для выключения компьютера введите 0 или 1");
         Scanner s = new Scanner(System.in);
         random = (int) (Math.random() * 2);
@@ -50,9 +50,16 @@ public class Computer {
         } else {
             System.out.println(random);
             System.out.println("Компьютер сгорел!");
+            System.out.println("Компьютеру конец!");
+        }
+    }
+
+    public void resourse() {
+        while (cycles != 0) {
+            System.out.println("Осталось " + cycles + " циклов вкл/выкл");
+            cycles -= 1;
         }
         System.out.println("Компьютеру конец!");
-        return this.random;
     }
 
     public String getCPU() {
