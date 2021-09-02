@@ -1,5 +1,6 @@
 package Lesson1;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class task2 {
@@ -20,5 +21,4 @@ public class task2 {
             System.out.println("Такой треугольника существует");
         }
     }
-
 }

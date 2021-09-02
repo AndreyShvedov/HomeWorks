@@ -4,12 +4,14 @@ import phonebook.entity.Person;
 
 import java.util.Random;
 
-public class InputMapper {
-    public Person toEntity(String[] args) {
-        var person = new Person(new Random().nextInt(100_000));
+public class inputMapper {
+    public Person toEntity(String[] args){
+        var person = new Person(new Random().nextInt(20));
         person.setFirstname(args[1]);
         person.setLastname(args[2]);
         person.setAge(Integer.parseInt(args[3]));
+        person.setPhoneNumber(args[4]);
         return person;
+
     }
 }
