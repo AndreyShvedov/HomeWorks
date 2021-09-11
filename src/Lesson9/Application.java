@@ -10,6 +10,7 @@ public class Application {
         var builder = new Scanner(System.in).nextLine();
         System.out.println(procesing(builder));
 
+
     }
 
     public static String procesing(String text) {
