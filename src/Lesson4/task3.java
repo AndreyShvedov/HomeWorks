@@ -12,6 +12,7 @@ public class task3 {
                 arr[i][j] = r.nextInt(10);
             }
         }
+
         for (int[] ints : arr) {  //вывод массива
             for (int anInt : ints) {
                 System.out.print(anInt + "\t");

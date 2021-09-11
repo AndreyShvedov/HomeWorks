@@ -1,14 +1,23 @@
+/*
 package Lesson7;
+
+import Lesson7.Turning.On;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Computer {
+public class Computer extends On */
+/*extends Off*//*
+ {
     private String CPU;
     private Integer RAM;
     private Integer HDD;
     private Integer cycles;
-    private Integer random;
+
+
+    public Computer() {
+
+    }
 
     public Computer(String CPU, Integer RAM, Integer HDD, Integer cycles) {     //конструктор задания параметров компьютера
         this.CPU = CPU;
@@ -24,35 +33,6 @@ public class Computer {
         System.out.println("Ресурс полных циклов: " + cycles);
     }
 
-    public void turningOn() {                //метод включения
-        System.out.println("Для включения компьютера введите 0 или 1");
-        Scanner s = new Scanner(System.in);
-        random = (int) (Math.random() * 2);
-        int on = s.nextInt();
-        if (on == random) {
-            System.out.println(random);
-            System.out.println("Компьютер включен!");
-        } else {
-            System.out.println(random);
-            System.out.println("Компьютер сгорел!");
-            System.out.println("Компьютеру конец!");
-        }
-    }
-
-    public void turningOff() {                //метод выключения
-        System.out.println("Для выключения компьютера введите 0 или 1");
-        Scanner s = new Scanner(System.in);
-        random = (int) (Math.random() * 2);
-        int on = s.nextInt();
-        if (on == random) {
-            System.out.println(random);
-            System.out.println("Компьютер выключен!");
-        } else {
-            System.out.println(random);
-            System.out.println("Компьютер сгорел!");
-            System.out.println("Компьютеру конец!");
-        }
-    }
 
     public void resourse() {
         while (cycles != 0) {
@@ -64,6 +44,10 @@ public class Computer {
 
     public String getCPU() {
         return CPU;
+    }
+
+    public String getCPU(String CPU) {
+        return this.CPU = CPU;
     }
 
     public void setCPU(String CPU) {
@@ -94,11 +78,6 @@ public class Computer {
         this.cycles = cycles;
     }
 
-    public Integer getRandom() {
-        return random;
-    }
 
-    public void setRandom(Integer random) {
-        this.random = random;
-    }
 }
+*/

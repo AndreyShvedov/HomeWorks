@@ -1,26 +1,53 @@
+import java.util.Scanner;
+
 public class JavaRush {
     public static void main(String[] args) {
+        String[] arr = new String[3];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.next();
+        }
+        for (String r:arr){
+            System.out.println(r);
+        }
 
-        printHydrogenInfo ();
-        printJavaInfo ();
-    }
-    private static void printJavaInfo() {
-        System.out.println("Остров Ява:");
-        System.out.println("Входит в состав Индонезии.");
-        System.out.println("На острове зародились государства Матарам, Маджапахит, Демак.");
-        System.out.println("Ява является самым населенным островом в мире:");
-        System.out.println("Общее население — 140 млн. человек.");
-        System.out.println("Плотность населения — 1061 чел/км.кв.");
-        System.out.println("Здесь производят один из знаменитых сортов кофе — Копи Лювак.");
-    }
 
-    private static void printHydrogenInfo() {
-        System.out.println("Водород:");
-        System.out.println("Это химический элемент периодической системы с обозначением H и атомным номером 1.");
-        System.out.println("Является самым легким элементом таблицы.");
-        System.out.println("Водород применяется в:");
-        System.out.println("-Химической промышленности;");
-        System.out.println("-Нефтеперерабатывающей промышленности;");
-        System.out.println("-Авиации;");System.out.println("-Электроэнергетике.");
+
+
+
+
+
+
+
+
+
+
+
+        /* int[] numbers = new int[5];
+        numbers[0] = 10;
+        String[] strings = new String[3];
+        strings[0] = "привет";
+        strings[1] = "пока";
+        strings[2] = "джава";
+
+        for (int i = 0; i < strings.length; i++) {
+            System.out.println(strings[i]);
+        }
+        System.out.println();
+        for (String string : strings) {     //FOR EACH
+            System.out.println(string);
+        }
+
+        int[] numbers1 ={1,2,3};
+        int s=0;
+        for (Integer x:numbers1) {
+            s = s + x;
+        }
+        System.out.println(s);
+
+        int value = 0;
+        String st = null;
+        System.out.println(st);*/
+
     }
 }

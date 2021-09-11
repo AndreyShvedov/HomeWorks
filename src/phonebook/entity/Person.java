@@ -1,37 +1,40 @@
 package phonebook.entity;
 
-public class Person {
-    private Integer id;          //приватное поле
-    private String firstname;     //приватное поле
-    private String lastname;     //приватное поле
-    private Integer age;         //приватное поле
-    private String phoneNumber; //приватное поле
+public class Person implements Entity {
+    private Integer id;
+    private String firstname;
+    private String lastname;
+    private String address;
+    private Integer age;
+    private String phoneNumber;
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public Person() {
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Person(Integer id) {                     //конструктор класса Person поля id
+    public Person(Integer id) {
         this.id = id;
     }
 
-    public Person(String id, String[] columns) {               //конструктор класса Person в виде массиса
-        this.id = Integer.parseInt(id);             //задает значение id из 1-го элемента массива
-        this.firstname = columns[1];                //задает значение firstname из 2-го элемента массива
-        this.lastname = columns[2];                 //задает значение lastname из 3-го элемента массива
-        this.age = Integer.parseInt(columns[3]);    //задает значение age из 4-го элемента массива
+    public Person(String id, String[] columns) {
+        this.id = Integer.parseInt(id);
+        this.firstname = columns[1];
+        this.lastname = columns[2];
+        this.age = Integer.parseInt(columns[3]);
+        this.address = columns[4];
     }
 
-    public Integer getId() {        //геттер поля ID
+    @Override
+    public void setData(String[] columns) {
+        this.id = Integer.parseInt(columns[0]);
+        this.firstname = columns[1];
+        this.lastname = columns[2];
+        this.age = Integer.parseInt(columns[3]);
+        this.phoneNumber = columns[4];
+        this.address = columns[5];
+    }
+
+    public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {     //сеттер поля ID
-        this.id = id;
     }
 
     public String getFirstname() {
@@ -39,6 +42,9 @@ public class Person {
     }
 
     public void setFirstname(String firstname) {
+        if (firstname.length() > 30) {
+            throw new IllegalArgumentException();
+        }
         this.firstname = firstname;
     }
 
@@ -55,7 +61,26 @@ public class Person {
     }
 
     public void setAge(Integer age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Wrong age: " + age);
+        }
         this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -66,6 +91,7 @@ public class Person {
                 ", lastname='" + lastname + '\'' +
                 ", age=" + age +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
