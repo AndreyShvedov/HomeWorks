@@ -1,7 +1,7 @@
 package Lesson9.Task4;
 
-import org.testng.annotations.Test;
 import org.junit.Assert;
+import org.junit.Test;
 
 public class Tests {
     @Test
