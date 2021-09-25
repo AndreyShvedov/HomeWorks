@@ -5,7 +5,7 @@ public class ApplicationShop {
         var shop = new Shop();
 
         shop.addProduct(new Product(1, "milk", 10));
-        shop.addProduct(new Product(2, "bread", 12));
+        shop.addProduct(new Product(2, "bread", 1200));
         shop.addProduct(new Product(3, "meat", 40));
         shop.addProduct(new Product(1, "milk", 10));
         shop.addProduct(new Product(4, "tomato", 5));
@@ -15,13 +15,12 @@ public class ApplicationShop {
         shop.deleteProdutc(3);
         shop.returnProdutcs();
 
-        shop.editProdutc(1, new Product("bear", 22));
+        shop.editProdutc(1, new Product("bear", 2200));
         shop.returnProdutcs();
 
         shop.sortPriceProduct();
 
         shop.sortIdProduct();
-
 
     }
 }

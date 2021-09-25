@@ -1,14 +1,22 @@
 package Lesson12;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Product {
     private Integer id;
     private String name;
     private Integer price;
+    private String t;
+
+    LocalDateTime dateAndTime = LocalDateTime.now();
+    String time = dateAndTime.format(DateTimeFormatter.ofPattern("dd MM yyyy hh:mm:ss"));
 
     public Product(Integer id, String name, Integer price) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.t = time;
     }
 
     public Product(String name, Integer price) {
@@ -50,6 +58,7 @@ public class Product {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", time=" + t +
                 '}';
     }
 }
