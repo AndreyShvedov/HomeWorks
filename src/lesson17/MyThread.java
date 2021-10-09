@@ -3,6 +3,7 @@ package lesson17;
 import java.io.*;
 
 public class MyThread extends Thread {
+    //создание потока
     public void run() {
         File file = new File("d:\\Study\\Java\\HomeWorks\\out\\production\\HomeWorks\\phonebook\\");
         File[] files = file.listFiles(((dir, name) -> name.endsWith(".class")));
