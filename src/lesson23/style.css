@@ -1,0 +1,56 @@
+{
+   margin: 100;
+    padding: 30;
+}
+
+p {
+    font-family: arial, helvetica, sans-serif;
+}
+
+.note {
+    margin: 0;
+    color: red;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#paragraph1 {
+    margin: 10px;
+}
+
+a[href="http://www.somesite.com"] {
+    font-weight: bold;
+}
+
+div#paragraph1 p.note {
+    color: green;
+}
+
+p.note > b {
+    color: blue;
+}
+
+h1 + p {
+    font-size:24px;
+}
+
+a:active {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p.note::first-letter {
+    font-size: 32px;
+}
+
+.note-div {
+    padding: 0;
+    color: red;
+}
+
+.note-div div {
+    padding: inherit;
+}

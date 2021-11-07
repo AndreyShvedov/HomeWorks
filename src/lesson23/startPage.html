@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InputFormPhonebook</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form method="post" action="/save">
+    <p class="note">Enter Firstname:</p>
+    <p><input name="Firstname" pattern="^[A-Za-zА-Яа-яЁё\s]+$"></p>
+    <p>Enter Lastname:</p>
+    <p><input name="Lastname" pattern="^[A-Za-zА-Яа-яЁё\s]+$"></p>
+    <p>Enter Age:</p>
+    <p><input name="Age" pattern="^[0-9]{1,3}"></p>
+    <p>Enter Phone number:</p>
+    <p><input name="number" pattern="[0-9]{9}"></p>
+    <p>Enter address:</p>
+    <p><input name="address" pattern="^[A-Za-zА-Яа-яЁё\s]+$"></p>
+    <p><input type="submit" value="Отправить"></p>
+</form>
+</body>
+</html>
